@@ -1,17 +1,8 @@
+
 console.log('Olá mundo!');
 
-// Criando um novo elemento 
-let novoElemento = document.createElement('h1');
-// Alterando o conteúdo de texto do elemento
-novoElemento.innerText = 'Hello, World! English! (Inglês) Ok?!';
-// Selecionando o elemento body
-let elementoBody = document.body;
-// Colocando o novo elemento no body
-elementoBody.appendChild(novoElemento);
-
-novoElemento.style.backgroundColor = 'blue';
-novoElemento.style.color = 'yellow';
-novoElemento.style.textAlign = 'center'; // Alinhamento do texto
+// Selecionando o título
+const titulo = document.getElementById('title');
 
 // Array de mensagens aleatórias com emojis
 const messages = [
@@ -72,31 +63,8 @@ function showMessage() {
     createConfetti();
 }
 
-// Cria o botão e o div para a mensagem
-function createUI() {
-    // Cria um elemento <div> para a mensagem
-    const messageDiv = document.createElement('div');
-    messageDiv.id = 'message';
-    messageDiv.style.fontSize = '24px';
-    messageDiv.style.color = 'blue';
-    messageDiv.style.textAlign = 'center';
-    messageDiv.style.marginTop = '20px';
-
-    // Cria um botão
-    const button = document.createElement('button');
-    button.textContent = 'Clique para receber uma mensagem, mudar a cor de fundo e ver confetes! 🎊';
-    button.style.display = 'block';
-    button.style.margin = '20px auto';
-    button.style.padding = '10px 20px';
-    button.style.fontSize = '18px';
-
-    // Adiciona um evento de clique ao botão
-    button.onclick = showMessage;
-
-    // Adiciona os elementos ao corpo do documento
-    document.body.appendChild(button);
-    document.body.appendChild(messageDiv);
-}
+// Adiciona um evento de clique ao botão
+document.getElementById('messageButton').onclick = showMessage;
 
 // Adiciona a animação CSS para os confetes
 const style = document.createElement('style');
@@ -108,6 +76,3 @@ style.innerHTML = `
 }
 `;
 document.head.appendChild(style);
-
-// Chama a função para criar a interface quando a página carregar
-window.onload = createUI;
