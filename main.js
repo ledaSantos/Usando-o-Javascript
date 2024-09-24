@@ -84,7 +84,7 @@ function createUI() {
 
     // Cria um botão
     const button = document.createElement('button');
-    button.textContent = 'Clique para para ficar feliz! 🎊';
+    button.textContent = 'Clique aqui para ficar feliz! 🎊';
     button.style.display = 'block';
     button.style.margin = '20px auto';
     button.style.padding = '10px 20px';
