@@ -11,6 +11,7 @@ elementoBody.appendChild(novoElemento);
 
 novoElemento.style.backgroundColor = 'blue';
 novoElemento.style.color = 'yellow';
+novoElemento.style.textAlign = 'center'; // Alinhamento do texto
 
 // Array de mensagens aleatórias com emojis
 const messages = [
